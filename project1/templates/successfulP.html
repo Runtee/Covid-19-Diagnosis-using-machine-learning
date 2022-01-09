@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+
+
+    <title>Dashboard</title>
+{% endblock %}
+    {% block body %} 
+
+    
+    <div class="nav-bar">
+        <nav>
+            <ul>
+                <li>
+                    <a href="/dashboard/profile">Profile</a>
+                </li>
+                <li>
+                    <a href="/dashboard/test"> Check status</a>
+                </li>
+                <li class="currentL">
+                    <a href="/dashboard/changePassword">Change Password </a>
+                </li>
+                <li>
+                    <a href="/logout"> Log out</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="center">
+    <h1>You have successful changed your password!</h1>
+   </div>
+    {% endblock %}
+
+</html>

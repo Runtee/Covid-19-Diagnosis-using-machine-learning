@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+
+
+    <title>Dashboard</title>
+{% endblock %}
+    {% block body %} 
+
+    
+    <div class="nav-bar">
+        <nav>
+            <ul>
+                <li>
+                    <a href="/dashboard/profile">Profile</a>
+                </li>
+                <li class="currentL">
+                    <a href="/dashboard/test"> Check status</a>
+                </li>
+                <li>
+                    <a href="/dashboard/changePassword">Change Password </a>
+                </li>
+                <li>
+                    <a href="/logout"> Log out</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+ <div class ='result'>
+<p>
+    Note the result below is <span class="important"> not 100% garantee to be true</span>
+    <br>
+    You are adviced to visit the hospital for confirmation
+</p>
+<p>
+    Your possible covid-19 status is <span class="important"> {{output}}</span>
+</p>
+</div>   
+{% endblock %}
+</html>

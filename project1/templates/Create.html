@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" type="text/css" href="/static/css/sign.css"> -->
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/sign.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+
+    <title>Document</title>
+</head>
+
+<body class='signbody'>
+    <div class='headers'>
+        <header>
+            <img src='/static/img/iStock-471629610-Converted.png'>
+            <p>Evans Laboratory</p>
+            <div class="nav-bar">
+                <nav>
+                    <ul>
+
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li style="background-color: white;">
+                            <a href="/create" style="color: rgb(18, 145, 204) ;"> Create Account</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <div style="border: 3px solid gray;"></div>
+    <div class="signinbox">
+        <img src='/static/img/iStock-471629610-Converted.png'>
+        <p class="he"> Evans Laboratory </p>
+        <h2>Create your account now</h2>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="danger">
+               <p> {{ messages[0] }}. Go to <a href="/login">login page</a> </p>
+            </div>
+        {% endif %}
+        {% endwith %}
+
+
+        <form method="post" action="/signup/post">
+            <!-- <p>username</p> -->
+            <input type="text" name='username' placeholder="Enter your username">
+            <!-- <p>password</p> -->
+            <br>
+            <input type="password" name = 'password' placeholder="Enter your password">
+            <br>
+            <br>
+
+            <input type="password" placeholder="Re-enter your password">
+            <br>
+            <br>
+            <input type="submit" name='' value=Continue>
+        </form>
+        <p class="mod">Already have an account click <a href="/login">here</a></p>
+
+    </div>
+</body>
+
+</html>

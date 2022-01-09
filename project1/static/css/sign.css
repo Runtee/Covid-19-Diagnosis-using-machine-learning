@@ -1,0 +1,85 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-image: url('../img/cdc-uN8TV9Pw2ik-unsplash2.jpg');
+    /* background-color: blueviolet; */
+    background-size: cover;
+    color: rgb(18, 145, 204);
+font-family:'Dyuthi';
+    /* background-color: rgb(223, 171, 103); */
+}
+h1{
+    color: rgb(255, 248, 239);
+
+}
+
+.headers img{
+width: 100px;
+height: 100px;
+}
+.signinbox{
+    width: 400px;
+    height: 500px;
+    background-color: white;
+    margin: 100px;
+    margin-left: 450px;
+    padding: 10px;
+}
+.signinbox form{
+    padding: 10px;
+}
+.signinbox img{
+    width: 100px; 
+    height: 100px;
+/* position:absolute; */
+}
+.he{
+    margin-top: -70px;
+    margin-left: 90px;
+    color: rgb(18, 145, 204);
+
+font-family:'Dyuthi';
+font-size: 25px;
+font-weight:bolder;
+}
+.signinbox h2{
+/* text-align: center; */
+margin-left: 10px;
+}
+.signinbox input{
+width: 94%;
+padding: 10px;
+}
+.signinbox input[type='submit']{
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(18, 145, 204);
+    border: rgb(18, 145, 204)
+    }
+.mod{
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+}
+.mod a{
+    text-align: center;
+    color: red;
+}
+.forget{
+    margin-right: 15px;
+ text-align: right;   
+}
+.forget a{
+text-decoration: none;
+color: rgb(18, 145, 204);
+}
+
+
+
+.danger p{
+    color: red;
+}
+.danger a{
+    color: red;
+}

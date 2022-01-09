@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/Dashboard.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/profile.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/test.css">
+    
+    {% block head %} {% endblock %}
+    <title>Document</title>
+</head>
+<body>
+    <div class='headers'>
+        <header>
+            <img src='/static/img/iStock-471629610-Converted.png'>
+            <p>Evans Laboratory</p>
+        <div class="name">
+            <p>    {{current_user.username}}            </p>
+
+        </div>
+        </header>
+    </div>
+    <div class="nav-bar">
+    {% block body %} {% endblock %}
+    </div>
+</body>
+</html>

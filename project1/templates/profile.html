@@ -1,0 +1,214 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+    <title>Profile</title>
+{% endblock %}
+
+    
+    {% block body %} 
+
+    <div class="nav-bar">
+        <nav>
+            <ul>
+                <li class="currentL">
+                    <a href="/dashboard/profile">Profile</a>
+                </li>
+                <li>
+                    <a href="/dashboard/test"> Check status</a>
+                </li>
+                <li>
+                    <a href="/dashboard/changePassword">Change Password </a>
+                </li>
+                <li>
+                    <a href="/logout"> Log out</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="profile">
+        <form action="/dashboard/profile" method="POST">
+            <div class="h">
+                <h1 class="heading">personal information</h1>
+            </div>
+            <div class="line">
+                <table>
+                    <div>
+                        <tr>
+                            <td>
+                                <label for="fname">First Name</label>
+                            </td>
+                            <td>
+                                <input type="text" id="fname" name="firstName" value='{% if profile.firstName %}{{profile.firstName}}
+                                               {% endif %}'>
+                            <td>
+                                <label for="mname">Middle Name</label>
+                            </td>
+                            <td>
+                                <input type="text" id="mname" name="middleName" value='{% if profile.middleName %}{{profile.middleName}}
+                                            {% endif %}'>
+                            </td>
+                            </p>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <p>
+                                <td>
+                                    <label for="text">Surname</label>
+                                </td>
+                                <td>
+                                    <input type="text" id="sname" name="surName" value='{% if profile.surName %}{{profile.surName}}
+                                    {% endif %}'>
+                                </td>
+                            </p>
+                            <p>
+                                <td>
+                                    <label for="email">Email</label>
+                                </td>
+                                <td>
+                                    <input type="email" name="email" id="email" value='{% if profile.email %} {{profile.email}}
+                                    {% endif %}'>
+                                </td>
+                            </p>
+                        </tr>
+
+                        <tr>
+                            <p>
+                                <td>
+                                    <label for="date">Date of Birth</label>
+                                </td>
+                                <td>
+                                    <input type="date" required name="DOB" id="DOB" value={% if profile.DOB %}
+                                        {{profile.DOB}} {% endif %}>
+                                </td>
+                            </p>
+                            <p>
+                                <td>
+                                    <label for="tel">Phone number</label>
+                                </td>
+                                <td>
+                                    <input type="tel" id="phone number" name="phone" value="{% if profile.phone %}{{profile.phone}}
+                                    {% endif %}">
+                                </td>
+                            </p>
+                        </tr>
+
+                        <tr>
+                            <p>
+                                <td>
+                                    <label for="origin">State of Origin</label>
+                                </td>
+                                <td>
+                                    <input type="text" id="state" name='state' value="{% if profile.state %}{{profile.state}}
+                                    {% endif %}">
+
+
+                                </td>
+                            </p>
+                            <p>
+                                <td>
+                                    <label for="Local">Local Government of Origin</label>
+                                </td>
+                                <td>
+                                    <input type="text" id="local" name="LGA" value="{% if profile.LGA %}{{profile.LGA}}
+                                    {% endif %}">
+                                </td>
+                            </p>
+                        </tr>
+
+                        <tr>
+                            <p>
+                                <td>
+                                    <label for="caddress">Contact Address</label>
+                                </td>
+                                <td>
+                                    <input type="text" id="caddress" name="caddress" value="{% if profile.caddress %}{{profile.caddress}}
+                                    {% endif %}">
+                                </td>
+                            </p>
+                            <p>
+                                <td>
+                                    <label for="sex">Sex</label>
+                                </td>
+                                <td>
+                                    <select name="sex" id="sex" aria-="true">
+                                        {% if profile.sex %}
+                                        <option>
+                                            {{profile.sex}}
+
+                                        </option>
+                                        {% else %}
+                                        <option>
+                                            Male
+                                        </option>
+                                        <option>
+                                            Female
+                                        </option>
+                                        <option>
+                                            Other
+                                        </option>
+                                        {% endif %}
+                                    </select>
+                                </td>
+                            </p>
+                        </tr>
+
+                        <tr>
+
+                        </tr>
+                        <tr>
+                            <p>
+                                <td>
+                                    <label for="bgroup">Blood Group</label>
+                                </td>
+                                <td>
+                                    <input type="text" name="bgroup" id="bgroup" value="{% if profile.bgroup %} {{profile.bgroup}}
+                                    {% endif %}">
+                                </td>
+                            </p>
+                            <p>
+                                <td>
+                                    <label for="gtype">Genotype</label>
+                                </td>
+                                <td>
+                                    <select name="gtype" id="gtype">
+                                        {% if profile.gtype %}
+                                        <option>
+                                            {{profile.gtype}}
+
+                                        </option>
+                                        {% else %}
+                                        <option value="AA">AA</option>
+                                        <option value="AS">AS</option>
+                                        <option value="SS">SS</option>
+                                        {% endif %}
+                                    </select>
+                                </td>
+                            </p>
+                        </tr>
+                        <tr>
+                            <p>
+                                <td>
+                                    <label for="image"> profile picture</label>
+                                </td>
+                                <td>
+                                <input type='file'name='image'>
+                                    
+                                </td>
+                            </p>
+                            
+                        </tr>
+
+                </table>
+
+
+            </div>
+
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    {% endblock %}
+
+</html>

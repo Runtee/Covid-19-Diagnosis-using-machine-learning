@@ -1,0 +1,207 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Test</title>
+{% endblock %}
+
+<body>
+    {% block body %}
+
+    <div class="nav-bar">
+        <nav>
+            <ul>
+                <li>
+                    <a href="/dashboard/profile">Profile</a>
+                </li>
+                <li class="currentL">
+                    <a href="/dashboard/test"> Check status</a>
+                </li>
+                <li>
+                    <a href="/dashboard/changePassword">Change Password </a>
+                </li>
+                <li>
+                    <a href="/logout"> Log out</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="test">
+        <div class="h">
+            <h1 class="heading">Check your covid-19 status</h1>
+            <p>Please fill in all the details </p>
+            <form action="/predict" method='POST'>
+        </div>
+        <table>
+            <div>
+                <tr>
+                    <td>
+                        <label for="Breathing">Breathing Problem</label>
+                    </td>
+                    <td>
+                        <select id="Breathing" required name="Breathing">
+                            <option></option>
+                            <option value=0>
+                                No
+                            </option>
+                            <option value=1>
+                                Yes
+                            </option>
+                        </select>
+                    <td>
+                        <label for="Fever">Fever</label>
+                    </td>
+                    <td>
+                        <select id="Fever" required name="Fever">
+                            <option></option>
+                            <option value=0>
+                                No
+                            </option>
+                            <option value=1>
+                                Yes
+                            </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Dry">Dry Cough</label>
+                    </td>
+                    <td>
+                        <select id="Dry" required name="Dry">
+                            <option></option>
+                            <option value=0>
+                                No
+                            </option>
+                            <option value=1>
+                                Yes
+                            </option>
+                        </select>
+                    <td>
+                        <label for="Sore">Sore throat</label>
+                    </td>
+                    <td>
+                        <select id="Sore" required name="Sore">
+                            <option></option>
+                            <option value=0>
+                                No
+                            </option>
+                            <option value=1>
+                                Yes
+                            </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Headache">Headache</label>
+                    </td>
+                    <td>
+                        <select id="Headache" required name="Headache">
+                            <option></option>
+                            <option value=0>
+                                No
+                            </option>
+                            <option value=1>
+                                Yes
+                            </option>
+                        </select>
+                    <td>
+                        <label for="Hyper">Hyper Tension</label>
+                    </td>
+                    <td>
+                        <select id="Hyper" required name="Hyper">
+                            <option></option>
+                            <option value=0>
+                                No
+                            </option>
+                            <option value=1>
+                                Yes
+                            </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Abroad">Abroad travel</label>
+                    </td>
+                    <td>
+                        <select id="Abroad" required name="Abroad">
+                            <option></option>
+                            <option value=0>
+                                No
+                            </option>
+                            <option value=1>
+                                Yes
+                            </option>
+                        </select>
+                    <td>
+                        <label for="Contact">Contact with COVID Patient</label>
+                    </td>
+                    <td>
+                        <select id="Contact" required name="Contact">
+                            <option></option>
+                            <option value=0>
+                                No
+                            </option>
+                            <option value=1>
+                                Yes
+                            </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Attended">Attended Large Gathering</label>
+                    </td>
+                    <td>
+                        <select id="Attended" required name="Attended">
+                            <option></option>
+                            <option value=0>
+                                No
+                            </option>
+                            <option value=1>
+                                Yes
+                            </option>
+                        </select>
+                    <td>
+                        <label for="Visited">Visited Public Exposed Places</label>
+                    </td>
+                    <td>
+                        <select id="Visited" required name="Visited">
+                            <option></option>
+                            <option value=0>
+                                No
+                            </option>
+                            <option value=1>
+                                Yes
+                            </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Family">Family working in Public Exposed Places</label>
+                    </td>
+                    <td>
+                        <select id="Family" required name="Family">
+                            <option></option>
+                            <option value=0>
+                                No
+                            </option>
+                            <option value=1>
+                                Yes
+                            </option>
+                        </select>
+                </tr>
+            </div>
+        </table>
+        <input type="submit" value="Check status">
+        </form>
+    </div>
+
+
+    {% endblock %}
+
+</body>
+
+</html>

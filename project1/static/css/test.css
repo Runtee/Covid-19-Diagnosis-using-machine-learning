@@ -1,0 +1,89 @@
+.test{
+    width: 900px;
+    margin-left: 300px;
+    height: auto;
+    margin-top: -680px;
+    background-color: whitesmoke;
+    border: 2px solid rgb(18, 145, 204);
+
+    
+
+}
+.test table {
+    background-color: white;
+    /*! padding: 0px; */
+      margin-left: 40px;
+      margin-bottom: 5px;
+  }
+
+.test p{
+    color: rgb(18, 145, 204);
+    font-size: 18px;
+    margin-left: 40px;
+    margin-top: -25px;
+    margin-bottom: 20px;
+}
+.test td, td p{
+    color: rgb(18, 145, 204);
+    width: 200px;
+    font-size: 18px;
+    font-weight:lighter;
+}
+
+
+.test select  {
+    display: inline-block;
+  
+    width: 90%;
+    padding: 5px;
+    margin: 2px;
+    border: 1px solid rgb(18, 145, 204);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.test .heading {
+    text-transform: uppercase;
+    color: rgb(18, 145, 204);
+    /* border-bottom: 3px solid lightslategray; */
+    padding: 10px;
+}
+.test input[type='submit']  {
+    display: inline-block;
+  
+    width: auto;
+    padding: 10px;
+    margin-left: 400px;
+    margin-bottom: 8px;
+    border: 1px solid rgb(18, 145, 204);
+    border-radius: 4px;
+    background-color: rgb(18, 145, 204);
+    box-sizing: border-box;
+}
+.test h1,.profile h4{
+    /* text-align: center; */
+    color: rgb(18, 145, 204);
+}
+.h{
+    background-color: whitesmoke;
+
+}
+.test h1{
+    text-align: center;
+margin-left: 10px;
+}
+
+.result{
+    margin-left: 300px;
+    margin-top: -680px;
+    background-color: whitesmoke;
+    width: 600px;
+
+}
+.result p{
+    color: rgb(18, 145, 204);
+}
+.important{
+    color: rgb(131, 44, 44);
+    text-decoration: underline;
+}

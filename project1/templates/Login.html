@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" type="text/css" href="/static/css/sign.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/home.css"> -->
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/sign.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class='headers'>
+        <header>
+            <img src='/static/img/iStock-471629610-Converted.png'>
+            <p>Evans Laboratory</p>
+            <div class="nav-bar">
+                <nav>
+                    <ul>
+
+                        <li>
+                            <a href="/home">Home</a>
+                        </li>
+                        <li style="background-color: white;">
+                            <a href="/login" style="color: rgb(18, 145, 204) ;"> Log in</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <div class="signinbox">
+        <img src='/static/img/iStock-471629610-Converted.png'>
+        <p class="he"> Evans Laboratory </p>
+        <h2>Login now</h2>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="danger">
+               <p> {{ messages[0] }} </p>
+            </div>
+        {% endif %}
+        {% endwith %}
+
+
+        <form method="post" action="/login">
+            <!-- <p>username</p> -->
+            <input type="text" name='username' placeholder="Enter your username">
+            <!-- <p>password</p> -->
+            <br>
+            <input type="password" name='password' placeholder="Enter your password">
+            <br>
+            
+            <br>
+            <input type="submit"  value=Continue>
+        </form>
+        <p class="forget"><a href=''>Forget password</a></p>
+
+        <p class="mod">Don't have an account click <a href="/signup">here</a> </p>
+    </div>
+</body>
+
+</html>
